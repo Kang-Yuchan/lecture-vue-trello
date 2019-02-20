@@ -1,22 +1,7 @@
 import Vue from 'vue'
-import App from './App.vue'
-import VueRouter from 'vue-router'
-
-Vue.use(VueRouter)
-
-const Login = {template: '<div>ログインページ</div>'}
-const NotFound = {template: "<div>ページが見つかりませんでした。"}
+import router from './router/index'
 
 
-const router = new VueRouter({
-  mode: 'history',
-  routes: [
-    { path: '/', component: App},
-    { path: '/login', component: Login},
-    { path: '*', component: NotFound }
-  ]
-  
-})
 
 new Vue({
   el: '#app',
